@@ -1,0 +1,60 @@
+@import "../../../node_modules/bootstrap/scss/variables";
+@import "../../../node_modules/bootstrap/scss/mixins/breakpoints";
+@import "../scss/variables";
+
+
+.my-tabs{
+    margin-top:100px;
+}
+
+.nav-item .nav-link{
+    
+  //  background:rgba(242,190,53,0.4);
+    color:#222;
+    font-size:18px;
+    font-family: 'mont-regular';
+}
+
+.nav-item .active{
+    background-color:#F2BE35 !important;
+    color:#555555;
+    font-size:18px;
+    font-family: 'mont-regular';
+}
+
+.tab-content{
+    margin-top:30px;
+    background:#ccc;
+    padding:15px;
+    box-shadow: 0px 10px 43px 0px rgba(16, 10, 25, 0.1);
+}
+
+thead,tfoot{
+    background: white;
+}
+
+.tab-pane h1,.tab-pane{
+    font-family: 'raleway-bold';
+    margin-bottom:30px;
+}
+
+.bottom-table{
+    background: #ccc;
+    box-shadow: 0px 10px 43px 0px rgba(16, 10, 25, 0.1);
+    margin: 15px;
+    padding: 20px;
+}
+
+.table > thead > tr > th,.table > thead > tr > td,.table > tfoot > tr > td{
+    font-family: 'mont-regular';
+    font-size:16px;
+    color:#555555;
+    text-transform: uppercase;
+}
+
+.table th, .table td{
+    font-family: 'mont-regular';
+    font-size:16px;
+    color:#555555;
+    text-transform: uppercase;
+}

@@ -1,0 +1,262 @@
+<div class="logo-center">
+  <h1 class="heading">ICO Calculator</h1>
+</div>
+
+<div id="snackbar"></div>
+
+<section class="calculator">
+
+
+
+    <div class="glowy-area row">
+
+
+        <div class="div-changer clearfix"> <!--col-md-6 col-lg-6 col-sm-6 offset-md-3 offset-lg-3 offset-sm-3 -->
+
+
+
+            <div class="curency">
+                <p class="cap_text" id="carexToEth"></p>
+                <p class="cap_text" id="carexToBtc"></p>
+                <p class="cap_text" id="carexToLtc"></p>
+                <p class="cap_text" id="carexToUsd" style="display:none"></p>
+            </div>
+            <div class="quantity">
+
+                    <div class="abs-image">
+                            <img src="../../assets/img/circlesign.png">
+                        </div>
+
+                <input type="number" id="num_val" min="1" step="5" (keyup)="calculate_now()" value="1000">
+                <!--  <div class="quantity-nav">
+                    <div class="quantity-button quantity-up" (click)="upping()">+</div>
+                    <div class="quantity-button quantity-down" (click)="downing()">-</div>
+                </div> -->
+                <p class="cap_text"></p>
+            </div>
+            <!-- <div class="box-bonus">
+                     <div class="bonus-box-val">+ 3000</div>
+                     <p class="cap_text">CURRENT BONUS: 25%</p>
+                 </div>  -->
+           
+
+            <div class="images-div">
+
+
+                <div class="row">
+
+                    <ul class="image-rows">
+
+                            <li class="active" id="btc_img">
+                                    <div class="one-div">
+                                            <img src="../../assets/img/btc2.png">
+                                    </div>
+                            </li>
+                                    
+                            <li class="" id="ltc_img">
+                                    <div class="one-div">
+                                            <img src="../../assets/img/ltc2.png">
+                                    </div>
+                            </li>
+
+
+                            <li class="" id="eth_img">
+                                    <div class="one-div">
+                                            <img src="../../assets/img/eth2.png">
+                                    </div>
+                            </li>
+                        
+                    </ul>
+                    
+
+                  
+                   
+
+                </div>
+
+            </div>
+
+            <div class="">
+
+                <div class=" datashow">
+                    <span class="currencyActual">BTC</span>
+                    <input type="text" class="currency_selected" (keydown)="calculate_now()"  readonly >
+
+                </div>
+                   <!--  <select name="s" id="b_select">
+    
+                        <option value="USD" class="val_in inusd">USD</option>
+                        <option value="BTC" class="val_in inbtc">BTC</option>
+                        <option value="ETH" class="val_in ineth">ETH</option>
+                        <option value="LTC" class="val_in inltc">LTC</option>
+    
+                    </select> -->
+                   <!--  <p class="cap_text">CHOOSE CURRENCY</p> -->
+            </div> 
+
+            <div class="box-btn">
+                <button id="buy_btn" class="btn btn-orange btn-orange-full" (click)="buyClicked()">BUY</button>
+            </div>
+
+
+        </div>
+
+        <div class="div-expander clearfix"> <!--col-md-6 col-lg-6 col-sm-6 -->
+
+            <div class="btc-ltc-div">
+                    <div style="text-align: right">
+                        <div id="qrcode2"></div>
+                    </div>
+                    
+                    <div class="input-text">
+                        <input id="copyTarget3" readonly type="text" class="copy-text" value="{{gixelyAddress}}" > <button class="abs-copy" id="copyAddress3" data-clipboard-target="#copyTarget3"><img src="../../assets/img/clipboard.png"></button>
+                    </div>
+            </div>
+
+            <div class="eth-form">
+                <h1>Enter wallet Address</h1>
+                <video id="preview" style="width:300px">
+
+                </video>
+                <div class="input-text">                 
+                        <input readonly  type="text"  id="ether_address" class="copy-text" placeholder=" - - - - - - - - - - - - - - - - - "> <button class="abs-copy" (click)="scanQrCode()"><img src="../../assets/img/scan-qr.png"></button>
+                </div>
+
+                <div class="ethLoader">
+
+                        <svg width="105" height="105" viewBox="0 0 105 105" xmlns="http://www.w3.org/2000/svg" fill="#F2BE35">
+                          <circle cx="12.5" cy="12.5" r="12.5">
+                              <animate attributeName="fill-opacity"
+                               begin="0s" dur="1s"
+                               values="1;.2;1" calcMode="linear"
+                               repeatCount="indefinite" />
+                          </circle>
+                          <circle cx="12.5" cy="52.5" r="12.5" fill-opacity=".5">
+                              <animate attributeName="fill-opacity"
+                               begin="100ms" dur="1s"
+                               values="1;.2;1" calcMode="linear"
+                               repeatCount="indefinite" />
+                          </circle>
+                          <circle cx="52.5" cy="12.5" r="12.5">
+                              <animate attributeName="fill-opacity"
+                               begin="300ms" dur="1s"
+                               values="1;.2;1" calcMode="linear"
+                               repeatCount="indefinite" />
+                          </circle>
+                          <circle cx="52.5" cy="52.5" r="12.5">
+                              <animate attributeName="fill-opacity"
+                               begin="600ms" dur="1s"
+                               values="1;.2;1" calcMode="linear"
+                               repeatCount="indefinite" />
+                          </circle>
+                          <circle cx="92.5" cy="12.5" r="12.5">
+                              <animate attributeName="fill-opacity"
+                               begin="800ms" dur="1s"
+                               values="1;.2;1" calcMode="linear"
+                               repeatCount="indefinite" />
+                          </circle>
+                          <circle cx="92.5" cy="52.5" r="12.5">
+                              <animate attributeName="fill-opacity"
+                               begin="400ms" dur="1s"
+                               values="1;.2;1" calcMode="linear"
+                               repeatCount="indefinite" />
+                          </circle>
+                          <circle cx="12.5" cy="92.5" r="12.5">
+                              <animate attributeName="fill-opacity"
+                               begin="700ms" dur="1s"
+                               values="1;.2;1" calcMode="linear"
+                               repeatCount="indefinite" />
+                          </circle>
+                          <circle cx="52.5" cy="92.5" r="12.5">
+                              <animate attributeName="fill-opacity"
+                               begin="500ms" dur="1s"
+                               values="1;.2;1" calcMode="linear"
+                               repeatCount="indefinite" />
+                          </circle>
+                          <circle cx="92.5" cy="92.5" r="12.5">
+                              <animate attributeName="fill-opacity"
+                               begin="200ms" dur="1s"
+                               values="1;.2;1" calcMode="linear"
+                               repeatCount="indefinite" />
+                          </circle>
+                      </svg>
+        
+        
+                      </div>
+
+                <div class="send-ethers">
+                    <button class="send-btn" (click)="sendEthers()">Send</button>
+                </div>
+            </div>
+
+
+        </div>
+
+        
+
+     
+
+
+      
+
+        <div id="ETHForm">
+            <div class="form-group">
+                <label>Your Email</label>
+                <input type="text" class="form-control" id="ethFormEmailAddress" />
+            </div>
+            <div class="form-group">
+                <label>Your Ethereum Address</label>
+                <input type="text" class="form-control" id="ethFormEthAddress" />
+            </div>
+            <div class="form-group" style="margin-top:15px">
+                <button onclick="submitEthForm()" type="submit" class="btn btn-success" style="color:white;width:250px;height:50px;">Submit</button>
+            </div>
+
+        </div>
+        <div id="BTCForm">
+
+            <div class="form-group">
+                <label for="email">Your Email Address:</label>
+                <input type="email" class="form-control" id="loggedEmailBTC">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Your Wallet Address:</label>
+                <input type="text" class="form-control" id="YourWalletAddressInBTC">
+            </div>
+            <div class="form-group">
+                <label for="email">Your Ethereum Address:</label>
+                <input type="text" class="form-control" id="YourEthereumInBTC">
+            </div>
+            <div class="form-group" style="margin-top:15px">
+                <button onclick="submitBTCLTCForm()" type="submit" class="btn btn-success" style="color:white;width:250px;height:50px;">Submit</button>
+            </div>
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+        <div class="holding" style="
+position: relative;
+">
+            <input id="copyButton" readonly="" value="1FqhsVyGVqSUuyYWf2GzMVHa8xFBFWKevB" style="display: inline-block;">
+            <button id="copyAddress" data-clipboard-target="#copyButton" style="position: absolute;right: 85px;top: 53px;background: transparent;border: none;">
+                <i class="fa fa-clone" style="color:white;" aria-hidden="true"></i>
+            </button>
+        </div>
+
+
+
+    </div>
+
+
+
+
+</section>

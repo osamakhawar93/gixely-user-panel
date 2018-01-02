@@ -1,0 +1,589 @@
+{
+	"variables": [],
+	"info": {
+		"name": "gixely_backend",
+		"_postman_id": "9f125b96-2362-a641-9add-1599f588e04f",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "signup",
+			"request": {
+				"url": "localhost:3000/api/user/signup",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "john doe",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "johndoe4@jonny.com",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "923445676453",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "referCode",
+							"value": "55G2-DHM0-50NN",
+							"description": "Optional",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "signin",
+			"request": {
+				"url": "localhost:3000/api/user/signin",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "johndoe4@jonny.com",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "insertGraphPoint",
+			"request": {
+				"url": "localhost:3000/api/user/graphpoint",
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG5kb2U0QGpvbm55LmNvbSIsIm5hbWUiOiJqb2huIGRvZSIsInVzZXJJRCI6IjVhM2JjOWIxZDhmNWU2MTRkMDQ3MDRjZSIsInJvbGUiOiJVU0VSIiwiaWF0IjoxNTE0Mjc1NDkzfQ.nZB0huds6csUQWk94SJ880e8B059pN_CHaUGNtLOjXM",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "rate",
+							"value": "1",
+							"description": "numerical value for gixely coin rate in USD",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "issue verification code",
+			"request": {
+				"url": "localhost:3000/api/user/verificationcode",
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG5kb2U0QGpvbm55LmNvbSIsIm5hbWUiOiJqb2huIGRvZSIsInVzZXJJRCI6IjVhM2JjOWIxZDhmNWU2MTRkMDQ3MDRjZSIsInJvbGUiOiJVU0VSIiwiaWF0IjoxNTE0Mjc1NDkzfQ.nZB0huds6csUQWk94SJ880e8B059pN_CHaUGNtLOjXM",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "verificationCodeType",
+							"value": "TRANSACTION",
+							"description": "The type of code to be issued",
+							"type": "text"
+						}
+					]
+				},
+				"description": "A verification code will be sent via email\n\nCode types: TRANSACTION, SIGNINVERIFICATION, CHANGEPASSWORD"
+			},
+			"response": []
+		},
+		{
+			"name": "Send Transaction - Gixely Coin",
+			"request": {
+				"url": "localhost:3000/api/user/transaction",
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG5kb2U0QGpvbm55LmNvbSIsIm5hbWUiOiJqb2huIGRvZSIsInVzZXJJRCI6IjVhM2JjOWIxZDhmNWU2MTRkMDQ3MDRjZSIsInJvbGUiOiJVU0VSIiwiaWF0IjoxNTE0Mjc1NDkzfQ.nZB0huds6csUQWk94SJ880e8B059pN_CHaUGNtLOjXM",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "toAddress",
+							"value": "2N66DDrmjDCMM3yMSYtAQyAqRtasSkFhbmX",
+							"description": "Address to whom Gixely Coin should be sent",
+							"type": "text"
+						},
+						{
+							"key": "amount",
+							"value": "10",
+							"description": "Amount of coin to send",
+							"type": "text"
+						},
+						{
+							"key": "verificationCode",
+							"value": "1540",
+							"description": "Verification code received by sender",
+							"type": "text"
+						}
+					]
+				},
+				"description": "send gixely coin\n\nreturns:\ncode: 200,\n                    message: 'Transaction successfull',\n                    data: {\n                        txHash: '0x80309b2278d55df800b88ebe39fbab500c46ac72',\n                        toAddress: 2N66DDrmjDCMM3yMSYtAQyAqRtasSkFhbmX,\n                        amount: 10\n                    }"
+			},
+			"response": []
+		},
+		{
+			"name": "Register for ICO - ETH",
+			"request": {
+				"url": "localhost:3000/api/user/registerforicoeth",
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG5kb2U0QGpvbm55LmNvbSIsIm5hbWUiOiJqb2huIGRvZSIsInVzZXJJRCI6IjVhM2JjOWIxZDhmNWU2MTRkMDQ3MDRjZSIsInJvbGUiOiJVU0VSIiwiaWF0IjoxNTE0Mjc1NDkzfQ.nZB0huds6csUQWk94SJ880e8B059pN_CHaUGNtLOjXM",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "ethAddress",
+							"value": "0x80309b2278d55df800b88ebe39fbab500c46ac72",
+							"description": "ETH address from where user will send Ether to admin eth address",
+							"type": "text"
+						}
+					]
+				},
+				"description": "Registers user for ICO via their ethAddress\n\nreturns:\ncode: 200,\n    message: 'User registered for ICO.',\n    data: {\n        adminEthAddress: 0x80309b2278d55df800b88ebe39fbab500c46ac72\n    }"
+			},
+			"response": []
+		},
+		{
+			"name": "Block user- Admin Accessable",
+			"request": {
+				"url": "localhost:3000/api/admin/users/block",
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG5kb2U0QGpvbm55LmNvbSIsIm5hbWUiOiJqb2huIGRvZSIsInVzZXJJRCI6IjVhM2JjOWIxZDhmNWU2MTRkMDQ3MDRjZSIsInJvbGUiOiJVU0VSIiwiaWF0IjoxNTE0Mjc1NDkzfQ.nZB0huds6csUQWk94SJ880e8B059pN_CHaUGNtLOjXM",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "userID",
+							"value": "",
+							"description": "user id",
+							"type": "text"
+						}
+					]
+				},
+				"description": "Block a user - Only accessable by admin\n\nreturns:\ncode: 200,\n    message: 'User blocked.',\n    data: {\n        userID\n    }"
+			},
+			"response": []
+		},
+		{
+			"name": "Unblock user- Admin Accessable copy",
+			"request": {
+				"url": "localhost:3000/api/admin/users/activate",
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG5kb2U0QGpvbm55LmNvbSIsIm5hbWUiOiJqb2huIGRvZSIsInVzZXJJRCI6IjVhM2JjOWIxZDhmNWU2MTRkMDQ3MDRjZSIsInJvbGUiOiJVU0VSIiwiaWF0IjoxNTE0Mjc1NDkzfQ.nZB0huds6csUQWk94SJ880e8B059pN_CHaUGNtLOjXM",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "userID",
+							"value": "",
+							"description": "user id",
+							"type": "text"
+						}
+					]
+				},
+				"description": "Unblock a user - Only accessable by admin\n\nreturns:\ncode: 200,\n    message: 'User unblocked.',\n    data: {\n        userID\n    }"
+			},
+			"response": []
+		},
+		{
+			"name": "get wallet address",
+			"request": {
+				"url": "localhost:3000/api/user/walletaddress",
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG5kb2U0QGpvbm55LmNvbSIsIm5hbWUiOiJqb2huIGRvZSIsInVzZXJJRCI6IjVhM2JjOWIxZDhmNWU2MTRkMDQ3MDRjZSIsInJvbGUiOiJVU0VSIiwiaWF0IjoxNTE0Mjc1NDkzfQ.nZB0huds6csUQWk94SJ880e8B059pN_CHaUGNtLOjXM",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "verificationCodeType",
+							"value": "TRANSACTION",
+							"description": "The type of code to be issued",
+							"type": "text"
+						}
+					]
+				},
+				"description": "Get user's wallet address\n\nreturns\n\ncode,\nmessage,\ndata: {\n\twalletAddress\n}"
+			},
+			"response": []
+		},
+		{
+			"name": "get Balance",
+			"request": {
+				"url": "localhost:3000/api/user/balance",
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG5kb2U0QGpvbm55LmNvbSIsIm5hbWUiOiJqb2huIGRvZSIsInVzZXJJRCI6IjVhM2JjOWIxZDhmNWU2MTRkMDQ3MDRjZSIsInJvbGUiOiJVU0VSIiwiaWF0IjoxNTE0Mjc1NDkzfQ.nZB0huds6csUQWk94SJ880e8B059pN_CHaUGNtLOjXM",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "verificationCodeType",
+							"value": "TRANSACTION",
+							"description": "The type of code to be issued",
+							"type": "text"
+						}
+					]
+				},
+				"description": "Get user's coin balance\n\nreturns\n\ncode,\nmessage,\ndata: {\n\tcoinBalance\n}"
+			},
+			"response": []
+		},
+		{
+			"name": "get users list- Admin Accessable",
+			"request": {
+				"url": "localhost:3000/api/admin/users",
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG5kb2U0QGpvbm55LmNvbSIsIm5hbWUiOiJqb2huIGRvZSIsInVzZXJJRCI6IjVhM2JjOWIxZDhmNWU2MTRkMDQ3MDRjZSIsInJvbGUiOiJVU0VSIiwiaWF0IjoxNTE0Mjc1NDkzfQ.nZB0huds6csUQWk94SJ880e8B059pN_CHaUGNtLOjXM",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "verificationCodeType",
+							"value": "TRANSACTION",
+							"description": "The type of code to be issued",
+							"type": "text"
+						}
+					]
+				},
+				"description": "Get users list - only accessable by admin\n\nreturns\n\ncode,\nmessage,\ndata: {\n\ttotalUsers,\n\tusers\n}"
+			},
+			"response": []
+		},
+		{
+			"name": "get All Transactions- Admin Accessable copy",
+			"request": {
+				"url": "localhost:3000/api/admin/transactions",
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG5kb2U0QGpvbm55LmNvbSIsIm5hbWUiOiJqb2huIGRvZSIsInVzZXJJRCI6IjVhM2JjOWIxZDhmNWU2MTRkMDQ3MDRjZSIsInJvbGUiOiJVU0VSIiwiaWF0IjoxNTE0Mjc1NDkzfQ.nZB0huds6csUQWk94SJ880e8B059pN_CHaUGNtLOjXM",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "verificationCodeType",
+							"value": "TRANSACTION",
+							"description": "The type of code to be issued",
+							"type": "text"
+						}
+					]
+				},
+				"description": "Get all transactions of the system - only accessable by admin\n\nNOTE: not working yet\n\nreturns\n\ncode,\nmessage,\ndata: {\n\ttotalTransactions,\n\ttransactions\n}"
+			},
+			"response": []
+		},
+		{
+			"name": "get user info and balance - Admin Accessable",
+			"request": {
+				"url": "localhost:3000/api/admin/users/123456789",
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG5kb2U0QGpvbm55LmNvbSIsIm5hbWUiOiJqb2huIGRvZSIsInVzZXJJRCI6IjVhM2JjOWIxZDhmNWU2MTRkMDQ3MDRjZSIsInJvbGUiOiJVU0VSIiwiaWF0IjoxNTE0Mjc1NDkzfQ.nZB0huds6csUQWk94SJ880e8B059pN_CHaUGNtLOjXM",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "verificationCodeType",
+							"value": "TRANSACTION",
+							"description": "The type of code to be issued",
+							"type": "text"
+						}
+					]
+				},
+				"description": "Get user's profile info and balance - only accessable by admin\n\nreturns\n\ncode,\nmessage,\ndata: {\n\tbalance,\n\tuser\n}\n\n\nParams:\nInsert userid into url"
+			},
+			"response": []
+		},
+		{
+			"name": "get user transactions - Admin accessable",
+			"request": {
+				"url": "localhost:3000/api/admin/users/id/transactions",
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG5kb2U0QGpvbm55LmNvbSIsIm5hbWUiOiJqb2huIGRvZSIsInVzZXJJRCI6IjVhM2JjOWIxZDhmNWU2MTRkMDQ3MDRjZSIsInJvbGUiOiJVU0VSIiwiaWF0IjoxNTE0Mjc1NDkzfQ.nZB0huds6csUQWk94SJ880e8B059pN_CHaUGNtLOjXM",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "verificationCodeType",
+							"value": "TRANSACTION",
+							"description": "The type of code to be issued",
+							"type": "text"
+						}
+					]
+				},
+				"description": "Get user's transactions - only accessable by admin\n\nNOTE: not working yet\n\nreturns\n\ncode,\nmessage,\ndata: {\n\treceivedTransactions,\n\tsentTransactions\n}\n\n\nParams:\nInsert userid into url"
+			},
+			"response": []
+		},
+		{
+			"name": "get Btc Rate",
+			"request": {
+				"url": "localhost:3000/api/user/btcrate",
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG5kb2U0QGpvbm55LmNvbSIsIm5hbWUiOiJqb2huIGRvZSIsInVzZXJJRCI6IjVhM2JjOWIxZDhmNWU2MTRkMDQ3MDRjZSIsInJvbGUiOiJVU0VSIiwiaWF0IjoxNTE0Mjc1NDkzfQ.nZB0huds6csUQWk94SJ880e8B059pN_CHaUGNtLOjXM",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "verificationCodeType",
+							"value": "TRANSACTION",
+							"description": "The type of code to be issued",
+							"type": "text"
+						}
+					]
+				},
+				"description": "Get BTC rate in USD\n\nreturns\n\ncode,\nmessage,\ndata: {\n\tbtcRate\n}"
+			},
+			"response": []
+		},
+		{
+			"name": "getDashboardData",
+			"request": {
+				"url": "localhost:3000/api/user/dashboard",
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG5kb2U0QGpvbm55LmNvbSIsIm5hbWUiOiJqb2huIGRvZSIsInVzZXJJRCI6IjVhM2JjOWIxZDhmNWU2MTRkMDQ3MDRjZSIsInJvbGUiOiJVU0VSIiwiaWF0IjoxNTE0Mjc1NDkzfQ.nZB0huds6csUQWk94SJ880e8B059pN_CHaUGNtLOjXM",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "graphpoints",
+			"request": {
+				"url": "localhost:3000/api/user/graphpoints",
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG5kb2U0QGpvbm55LmNvbSIsIm5hbWUiOiJqb2huIGRvZSIsInVzZXJJRCI6IjVhM2JjOWIxZDhmNWU2MTRkMDQ3MDRjZSIsInJvbGUiOiJVU0VSIiwiaWF0IjoxNTE0Mjc1NDkzfQ.nZB0huds6csUQWk94SJ880e8B059pN_CHaUGNtLOjXM",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "get Referred users",
+			"request": {
+				"url": "localhost:3000/api/user/referred",
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG5kb2U0QGpvbm55LmNvbSIsIm5hbWUiOiJqb2huIGRvZSIsInVzZXJJRCI6IjVhM2JjOWIxZDhmNWU2MTRkMDQ3MDRjZSIsInJvbGUiOiJVU0VSIiwiaWF0IjoxNTE0Mjc1NDkzfQ.nZB0huds6csUQWk94SJ880e8B059pN_CHaUGNtLOjXM",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "Returns all users reffered by the calling user\n\nreturn \n\ncode,\nmessage,\ndata: {\n\tusers\n}"
+			},
+			"response": []
+		}
+	]
+}

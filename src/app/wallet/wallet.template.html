@@ -1,0 +1,306 @@
+<section class="prices-tab">
+
+    <div class="row">
+      
+      <div class="col-md-4 col-lg-4 col-sm-4 col-xs-12">
+
+          <section class="widget bg-primary text-white">
+              <div class="widget-body clearfix">
+                <div class="row flex-nowrap">
+                  <div class="col-xs-3">
+                    <span class="widget-icon">
+                      <img src="../../assets/img/btc.png">
+                    </span>
+                  </div>
+                  <div class="col-xs-9 div-overlay">
+                    <h1 class="no-margin">BTC</h1>
+                    <p class="h2 no-margin fw-normal">$ {{dashboardData?.btcRate}}</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+      </div>
+      <div class="col-md-4 col-lg-4 col-sm-4 col-xs-12">
+
+          <section class="widget bg-primary text-white">
+              <div class="widget-body clearfix">
+                <div class="row flex-nowrap">
+                  <div class="col-xs-3">
+                    <span class="widget-icon">
+                        <img src="../../assets/img/ltc2.png">
+                    </span>
+                  </div> 
+                  <div class="col-xs-9 div-overlay">
+                    <h1 class="no-margin">LTC</h1>
+                    <p class="h2 no-margin fw-normal">$ {{dashboardData?.ltcRate}}</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+      </div>
+      <div class="col-md-4 col-lg-4 col-sm-4 col-xs-12">
+
+          <section class="widget bg-primary text-white">
+              <div class="widget-body clearfix">
+                <div class="row flex-nowrap">
+                  <div class="col-xs-3">
+                    <span class="widget-icon">
+                        <img src="../../assets/img/eth.png">
+                    </span>
+                  </div>
+                  <div class="col-xs-9 div-overlay">
+                    <h1 class="no-margin">ETH</h1>
+                    <p class="h2 no-margin fw-normal">$ {{dashboardData?.ethRate}}</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+      </div>
+    </div>
+
+</section>
+
+
+<section class="withdraw">
+
+  <div class="table-responsive">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Requested At</th>
+          <th>Address</th>
+          <th>BTC</th>
+          <th>Completed At</th>
+          <th>TXID</th>
+        </tr>
+      </thead>
+      <tbody>
+
+      </tbody>
+    </table>
+  </div>
+
+</section>
+
+<section class='recieve-btc'>
+  <div class="row">
+    <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
+        <div class="recieve-inner">
+            <h1>Send Gixely Coin
+              <small> Fee 0.2%</small>
+            </h1>
+    
+            <div class='send-btc-form'>
+              <div class='form-group'>
+                <label>To Address</label>
+                <input type="text" id="sendTransactionForm-ToAddress" name="sendTransactionForm.ToAddress" [(ngModel)]="sendTransactionForm.ToAddress" class="custom-input">
+              </div>
+    
+    
+              <div class='form-group'>
+                <label>Amount of coins</label>
+                <input type="number" id="sendTransactionForm-CoinsAmount" name="sendTransactionForm.CoinsAmount" [(ngModel)]="sendTransactionForm.CoinsAmount" class="custom-input">
+              </div>
+    
+              <div class='form-group'>
+                <small>Please check your email to find the verfication code</small>
+                <br>
+                <label>Verfication Code</label>
+                <input type="text" id="sendTransactionForm-VerificationCode" name="sendTransactionForm.VerificationCode" [(ngModel)]="sendTransactionForm.VerificationCode" class="custom-input">
+              </div>
+    
+              <div class="verifyCode2">
+    
+                <svg width="105" height="105" viewBox="0 0 105 105" xmlns="http://www.w3.org/2000/svg" fill="#F2BE35">
+                  <circle cx="12.5" cy="12.5" r="12.5">
+                    <animate attributeName="fill-opacity" begin="0s" dur="1s" values="1;.2;1" calcMode="linear" repeatCount="indefinite" />
+                  </circle>
+                  <circle cx="12.5" cy="52.5" r="12.5" fill-opacity=".5">
+                    <animate attributeName="fill-opacity" begin="100ms" dur="1s" values="1;.2;1" calcMode="linear" repeatCount="indefinite" />
+                  </circle>
+                  <circle cx="52.5" cy="12.5" r="12.5">
+                    <animate attributeName="fill-opacity" begin="300ms" dur="1s" values="1;.2;1" calcMode="linear" repeatCount="indefinite" />
+                  </circle>
+                  <circle cx="52.5" cy="52.5" r="12.5">
+                    <animate attributeName="fill-opacity" begin="600ms" dur="1s" values="1;.2;1" calcMode="linear" repeatCount="indefinite" />
+                  </circle>
+                  <circle cx="92.5" cy="12.5" r="12.5">
+                    <animate attributeName="fill-opacity" begin="800ms" dur="1s" values="1;.2;1" calcMode="linear" repeatCount="indefinite" />
+                  </circle>
+                  <circle cx="92.5" cy="52.5" r="12.5">
+                    <animate attributeName="fill-opacity" begin="400ms" dur="1s" values="1;.2;1" calcMode="linear" repeatCount="indefinite" />
+                  </circle>
+                  <circle cx="12.5" cy="92.5" r="12.5">
+                    <animate attributeName="fill-opacity" begin="700ms" dur="1s" values="1;.2;1" calcMode="linear" repeatCount="indefinite" />
+                  </circle>
+                  <circle cx="52.5" cy="92.5" r="12.5">
+                    <animate attributeName="fill-opacity" begin="500ms" dur="1s" values="1;.2;1" calcMode="linear" repeatCount="indefinite" />
+                  </circle>
+                  <circle cx="92.5" cy="92.5" r="12.5">
+                    <animate attributeName="fill-opacity" begin="200ms" dur="1s" values="1;.2;1" calcMode="linear" repeatCount="indefinite" />
+                  </circle>
+                </svg>
+    
+    
+              </div>
+    
+    
+              <div class='submit-btn'>
+                <button class="depositBTC" id="send-trans" (click)="sendTransaction()">Send verification code</button>
+              </div>
+    
+              <div class='form-group' *ngIf="verficationCodeInputForSendGXY">
+                <label>Enter the verification code</label>
+                <input type="text" class="custom-input">
+              </div>
+            </div>
+    
+            <div class="verfication-code-div">
+    
+    
+              <div class="verifyCode">
+    
+                <svg width="105" height="105" viewBox="0 0 105 105" xmlns="http://www.w3.org/2000/svg" fill="#F2BE35">
+                  <circle cx="12.5" cy="12.5" r="12.5">
+                    <animate attributeName="fill-opacity" begin="0s" dur="1s" values="1;.2;1" calcMode="linear" repeatCount="indefinite" />
+                  </circle>
+                  <circle cx="12.5" cy="52.5" r="12.5" fill-opacity=".5">
+                    <animate attributeName="fill-opacity" begin="100ms" dur="1s" values="1;.2;1" calcMode="linear" repeatCount="indefinite" />
+                  </circle>
+                  <circle cx="52.5" cy="12.5" r="12.5">
+                    <animate attributeName="fill-opacity" begin="300ms" dur="1s" values="1;.2;1" calcMode="linear" repeatCount="indefinite" />
+                  </circle>
+                  <circle cx="52.5" cy="52.5" r="12.5">
+                    <animate attributeName="fill-opacity" begin="600ms" dur="1s" values="1;.2;1" calcMode="linear" repeatCount="indefinite" />
+                  </circle>
+                  <circle cx="92.5" cy="12.5" r="12.5">
+                    <animate attributeName="fill-opacity" begin="800ms" dur="1s" values="1;.2;1" calcMode="linear" repeatCount="indefinite" />
+                  </circle>
+                  <circle cx="92.5" cy="52.5" r="12.5">
+                    <animate attributeName="fill-opacity" begin="400ms" dur="1s" values="1;.2;1" calcMode="linear" repeatCount="indefinite" />
+                  </circle>
+                  <circle cx="12.5" cy="92.5" r="12.5">
+                    <animate attributeName="fill-opacity" begin="700ms" dur="1s" values="1;.2;1" calcMode="linear" repeatCount="indefinite" />
+                  </circle>
+                  <circle cx="52.5" cy="92.5" r="12.5">
+                    <animate attributeName="fill-opacity" begin="500ms" dur="1s" values="1;.2;1" calcMode="linear" repeatCount="indefinite" />
+                  </circle>
+                  <circle cx="92.5" cy="92.5" r="12.5">
+                    <animate attributeName="fill-opacity" begin="200ms" dur="1s" values="1;.2;1" calcMode="linear" repeatCount="indefinite" />
+                  </circle>
+                </svg>
+    
+    
+              </div>
+    
+              <div class='submit-btn'>
+                <button class="depositBTC" id="sendEmail" (click)="sendVerficiationCodeToEmail()">Send verification code</button>
+              </div>
+            </div>
+    
+    
+          </div>
+    </div>
+    <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
+      <div class="recieve-inner">
+        <h1>Recieve Gixely Coin</h1>
+        <p>Get address to accept Gixely payments</p>
+        <button class="depositBTC" data-toggle="modal" data-target="#myModal">Deposit Gixely Coin</button>
+
+        <div class="table-responsive">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Address</th>
+                <th>BTC</th>
+                <th>Confirmation</th>
+              </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- <section class='send-btc'>
+  <div class="row">
+    <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
+      <div class="recieve-inner">
+        <h1>Send Bitcoin (BTC)
+          <small> Fee 0.2%</small>
+        </h1>
+
+
+
+        <p>Coming Soon</p>
+              <div class='send-btc-form'>
+                                <div class='form-group'>
+                                    <label>To Address</label>
+                                    <input type="text" class="custom-input">
+                                </div>
+
+
+                                <div class='form-group'>
+                                            <label>Amount in Bitcoin (All: 0.00000000 BTC)</label>
+                                            <input type="text" class="custom-input">
+                                </div>
+
+                                <div class='submit-btn'>
+                                        <button class="depositBTC">Send verification code</button>
+                                </div>
+
+                                <div class='form-group' *ngIf="verficationCodeInputForSendBtc">
+                                        <label>Enter the verification code</label>
+                                        <input type="text" class="custom-input">
+                                </div>
+                          
+                        </div> 
+
+
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
+     
+    </div>
+  </div>
+</section> -->
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" role="dialog">
+  <div class="modal-dialog modal-md">
+    <div class="modal-content">
+      <div class="modal-body">
+
+        <div class="subcribe-form">
+          <div class="input-field">
+            <input type="text" id="copyTarget2" class="mont-e-light font-16 black" value="{{gixelyAddress}}" placeholder="Enter your email address"
+              readonly>
+          </div>
+          <div class="btn-field">
+            <button class="send-btn copyButton2" data-clipboard-target="#copyTarget2">
+              <img src="../../assets/img/copy.png">
+            </button>
+          </div>
+
+        </div>
+
+        <div class="center">
+          <div class="qr">
+            <div id="qrcode"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

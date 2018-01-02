@@ -1,0 +1,125 @@
+
+  <main id="content" class="widget-login-container" role="main">
+    <div class="row">
+      <div class="col-xl-8 col-md-8 col-sm-7 hidden-xs no-padding">
+        <div class="background">
+
+        </div>
+      </div>
+      <div class="col-xl-4 col-md-4 col-xs-12 col-sm-5 no-padding">
+        <section class="widget widget-login animated fadeInUp scrolled">
+          <header>
+            <h3 class='heading'>Signup</h3>
+          </header>
+          <div class="widget-body">
+              
+            <form class="login-form mt-lg">
+
+               <div class="logo">
+                <img src="../../assets/img/logo.gif">
+               </div>
+              <div class="form-group">
+                <label>Username</label>
+                <input type="text" class="custom-inputs" id="signedUpData-username" name="signedUpData.username" [(ngModel)]="signedUpData.username" placeholder="">
+              </div>
+              <div class="form-group">
+                  <label>Email</label>
+                  <input type="email" class="custom-inputs" id="signedUpData-email" name="signedUpData.email" [(ngModel)]="signedUpData.email" placeholder="">
+                </div>
+              <div class="form-group">
+                  <label>Phone Number</label>
+                <input class="custom-inputs" id="pswd" type="text" id="signedUpData-phoneNumber" name="signedUpData.phoneNumber" [(ngModel)]="signedUpData.phoneNumber" placeholder="">
+              </div>
+              <div class="form-group">
+                  <label>Referral ID</label>
+                <input class="custom-inputs" id="pswd" type="text" id="signedUpData-referral" name="signedUpData.referral" [(ngModel)]="signedUpData.referral" placeholder="">
+              </div>
+              <div class="form-group">
+                  <label>Password</label>
+                <input class="custom-inputs" id="pswd" type="password" id="signedUpData-password" name="signedUpData.password" [(ngModel)]="signedUpData.password" placeholder="">
+              </div>
+
+              <div class="myLoader">
+
+                <svg width="105" height="105" viewBox="0 0 105 105" xmlns="http://www.w3.org/2000/svg" fill="#F2BE35">
+                  <circle cx="12.5" cy="12.5" r="12.5">
+                      <animate attributeName="fill-opacity"
+                       begin="0s" dur="1s"
+                       values="1;.2;1" calcMode="linear"
+                       repeatCount="indefinite" />
+                  </circle>
+                  <circle cx="12.5" cy="52.5" r="12.5" fill-opacity=".5">
+                      <animate attributeName="fill-opacity"
+                       begin="100ms" dur="1s"
+                       values="1;.2;1" calcMode="linear"
+                       repeatCount="indefinite" />
+                  </circle>
+                  <circle cx="52.5" cy="12.5" r="12.5">
+                      <animate attributeName="fill-opacity"
+                       begin="300ms" dur="1s"
+                       values="1;.2;1" calcMode="linear"
+                       repeatCount="indefinite" />
+                  </circle>
+                  <circle cx="52.5" cy="52.5" r="12.5">
+                      <animate attributeName="fill-opacity"
+                       begin="600ms" dur="1s"
+                       values="1;.2;1" calcMode="linear"
+                       repeatCount="indefinite" />
+                  </circle>
+                  <circle cx="92.5" cy="12.5" r="12.5">
+                      <animate attributeName="fill-opacity"
+                       begin="800ms" dur="1s"
+                       values="1;.2;1" calcMode="linear"
+                       repeatCount="indefinite" />
+                  </circle>
+                  <circle cx="92.5" cy="52.5" r="12.5">
+                      <animate attributeName="fill-opacity"
+                       begin="400ms" dur="1s"
+                       values="1;.2;1" calcMode="linear"
+                       repeatCount="indefinite" />
+                  </circle>
+                  <circle cx="12.5" cy="92.5" r="12.5">
+                      <animate attributeName="fill-opacity"
+                       begin="700ms" dur="1s"
+                       values="1;.2;1" calcMode="linear"
+                       repeatCount="indefinite" />
+                  </circle>
+                  <circle cx="52.5" cy="92.5" r="12.5">
+                      <animate attributeName="fill-opacity"
+                       begin="500ms" dur="1s"
+                       values="1;.2;1" calcMode="linear"
+                       repeatCount="indefinite" />
+                  </circle>
+                  <circle cx="92.5" cy="92.5" r="12.5">
+                      <animate attributeName="fill-opacity"
+                       begin="200ms" dur="1s"
+                       values="1;.2;1" calcMode="linear"
+                       repeatCount="indefinite" />
+                  </circle>
+              </svg>
+
+
+              </div>
+              <div class="clearfix">
+                <div class="action">
+                  <a class="btn btn-inverse btn-sm login-signup-btn" (click)="SignUp()">Signup</a>
+                </div>
+              </div>
+              <div class="row m-t-1">
+                <div class="col-md-6 push-md-6">
+                  <div class="clearfix">
+                
+                  </div>
+                </div>
+
+                <div class="col-md-12">
+                  <a class="mr-n-lg" [routerLink]="['/', 'login']">Already signed Up? <span class="glow">Login</span> here</a>
+                </div>
+              </div>
+            </form>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+

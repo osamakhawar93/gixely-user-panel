@@ -1,0 +1,47 @@
+<div class="subcribe-form">
+
+    <h1 class='heading'>Referral Code for Adding to your team</h1>
+    
+    <div class="input-field">
+        <input type="text" id="copyTarget" class="mont-e-light font-16 black" value="{{gixelyAddress}}" placeholder="Enter your email address" readonly>
+    </div>
+    <div class="btn-field">
+        <button class="copyButton myBtn"  (clicks)="callToCopy()" data-clipboard-target="#copyTarget">
+            <img src="../../assets/img/copy.png">
+        </button>
+    </div>
+
+</div>
+
+
+
+
+<section class="team-section">
+  <div class="container">
+      <h1>Members</h1>
+      <div class="table-responsive">
+          <table class="table">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Phone No</th>
+                  <th>Created At</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let users of usersList;let i=index">
+                    <td>{{i}}</td>
+                    <td>{{users.name}}</td>
+                    <td>{{users.email}}</td>
+                    <td>{{users.phoneNo}}</td>
+                    <td>{{users.createdAt}}</td>
+                    <td>{{users.status}}</td>
+                </tr>
+              </tbody>
+            </table>
+      </div>
+  </div>
+</section>

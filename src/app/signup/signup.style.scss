@@ -1,0 +1,115 @@
+@import "../../../node_modules/bootstrap/scss/variables";
+@import "../scss/variables";
+
+/***********************************/
+/**             LOGIN             **/
+/***********************************/
+
+.login-page{
+  background-color: $gray-semi-lighter;
+}
+
+.login-page .page-footer {
+  margin-bottom: 25px;
+  font-size: $font-size-mini;
+  color: $text-muted;
+  text-align: center;
+  @media (min-height: 600px) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}
+
+/* .widget-login-container{
+  padding-top: 10%;
+} */
+
+.widget-login-logo{
+  margin-top: 15px;
+  margin-bottom: 15px;
+  text-align: center;
+  font-weight: $font-weight-normal;
+  .fa-circle{
+    font-size: 13px;
+    margin: 0 20px;
+  }
+}
+
+.widget-login{
+  padding: 30px;
+  height:100vh;
+  padding: 50px 60px 0;
+  > header{
+    h1,h2,h3,h4,h5,h6{
+      font-weight: $font-weight-normal;
+      text-align: center;
+    }
+  }
+}
+
+.widget-login-info{
+  font-size: $font-size-mini;
+  color: #888;
+  margin-top: 1px;
+  margin-bottom: 0;
+  text-align: center;
+
+  &.abc-checkbox {
+    margin-left: -25px;
+  }
+}
+
+.login-form{
+  .form-control{
+    font-size: $font-size-mini;
+    border: none;
+    background-color: $gray-lighter;
+    &:focus{
+      background-color: $gray-semi-lighter;
+    }
+  }
+}
+
+
+.background{
+  background-image:url('../../assets/img/bg.jpg');
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center;
+  height:100vh;
+}
+
+.no-padding{
+  padding:0;
+}
+
+.logo{
+  margin:0px 0;
+  height: 110px;
+}
+.logo img{
+  width:100px;
+}
+
+.heading{
+  
+  font-family: 'mont-bold';  
+}
+
+.widget{
+  margin-bottom:0;
+}
+
+.glow{
+  color:#204d74;
+  font-family: 'mont-bold';  
+  font-size:15px;
+}
+
+.myLoader{
+  display: none;
+  width:50px;
+  margin:30px auto;
+}

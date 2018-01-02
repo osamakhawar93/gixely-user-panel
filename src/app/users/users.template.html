@@ -1,0 +1,44 @@
+<div class="container">
+<div id="snackbar"></div>
+  <h1 class='myheading'>Users</h1>
+
+  <div class="searchUsers">
+    <input type="text" placeholder="start typing name here ... " name="searchedQuery" [(ngModel)]="searchedQuery" (keyup)="searchThisUser(this)">
+  </div>
+ <div class="col-md-12 col-lg-12 col-sm-12">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Created Date</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone #</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of searchedUsersList;let i=index">
+          <td>{{i}}</td>
+         <td>{{user.createdAt}}</td>
+         <td>{{user.name}}</td>
+         <td>{{user.email}}</td>
+         <td>{{user.phoneNo}}</td>
+         <td>{{user.status}}</td>
+         <td>
+
+          <button class="inline-btns btn-success" (click)="UnBlockUser(user)">
+            <i class="fa fa-check" aria-hidden="true"></i>
+          </button>
+
+          <button class="inline-btns btn-danger" (click)="blockUser(user)">
+            <i class="fa fa-ban" aria-hidden="true"></i>
+          </button>
+
+         </td>
+        </tr>
+      </tbody>
+    </table>
+ </div>
+</div>
